@@ -6,12 +6,7 @@ require('colors');
 var fetchWeather = require('./fetch-weather');
 var prepareForWeather = require('./prepared-for-the-weather');
 
-var commandLineArgs = require("command-line-args");
-
-var cli = commandLineArgs([
-    { name: "location", alias: "l", type: String, defaultValue: "London" }
-]);
-var location = cli.parse().location;
+var location = 'Cracow';
 
 /* Fetch weather data */
 fetchWeather.fetchWeather(location,
